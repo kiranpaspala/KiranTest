@@ -1,0 +1,63 @@
+<!--<h1>{{ title }}</h1>
+
+We need a table here:-->
+
+<div *ngIf="tableData">
+  <table border="1">
+    <thead>
+      <tr>
+        <th *ngFor="let header of tableData.header | keyvalue">
+          {{ header.value.name }}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of tableData.rows">
+        <td *ngFor="let header of tableData.header | keyvalue">
+          <ng-container [ngSwitch]="header.value.uiType">
+            <!-- Text and Input Types -->
+            <ng-container *ngSwitchCase="'text'">
+              {{ row[header.key] }}
+            </ng-container>
+
+            <!-- DateTime Type -->
+            <ng-container *ngSwitchCase="'dateTime'">
+              <ng-container *ngIf="isDateTimeHeader(header.value)">
+                {{ formatDate(row[header.key].toString(), header.value.format) }}
+              </ng-container>
+            </ng-container>
+
+            <!-- Dropdown Type -->
+            <ng-container *ngSwitchCase="'dropdown'">
+              <ng-container *ngIf="isDropdownHeader(header.value)">
+                <select [ngModel]="row[header.key]">
+                  <option *ngFor="let option of header.value.options" [value]="option.value">
+                    {{ option.displayText }}
+                  </option>
+                </select>
+              </ng-container>
+            </ng-container>
+
+            <!-- Note (Text Input Field) -->
+            <ng-container *ngSwitchCase="'input'">
+              <ng-container *ngIf="header.value.name === 'Note'">
+                <input type="text" [(ngModel)]="row[header.key]" />
+              </ng-container>
+              <ng-container *ngIf="header.value.name !== 'Note'">
+                {{ row[header.key] }}
+              </ng-container>
+            </ng-container>
+          </ng-container>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+
+
+
