@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 # MohOnlineTest
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.2.
@@ -55,8 +53,3 @@ TL;DR render a table based on given data as the screenshot below:
  5. Coding
  6. Share the access of your repo as adding a collaborators (https://github.com/<yourusername>/<your_repo>/settings/access) to the user that mentioned in the email and reply
 =======
-# KiranTest
->>>>>>> 14a197723e2e5cf295de9d5695418ba6dfaab507
-=======
-
->>>>>>> eb30c6fc732d5c97322012c2b0b6da3bb01ffbe2
