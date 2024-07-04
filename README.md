@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # MohOnlineTest
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.2.
@@ -56,3 +57,6 @@ TL;DR render a table based on given data as the screenshot below:
 =======
 # KiranTest
 >>>>>>> 14a197723e2e5cf295de9d5695418ba6dfaab507
+=======
+
+>>>>>>> eb30c6fc732d5c97322012c2b0b6da3bb01ffbe2
